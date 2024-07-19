@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>yotube sample</title>
+        <style>
+            body{
+                margin-top: 0;
+                padding-bottom: 1000px;
+                margin-left: 0;
+            }
+            .sidebar{
+                    display: flex;
+                    flex-direction: column;
+                    height: 500px;
+                    width: 78px;
+                    background-color: white;
+                    margin-top: 50px;
+                    align-items: center;
+                    position: fixed;
+                }
+                .s{
+                    height: 30px;
+                    display: flex;
+                    height: 90px;
+                    flex-direction: column;
+                    
+                }
+                .s img{
+                    height: 20px;
+                    padding-top: 20px;
+                }
+                .s p{
+                    font-size: 12px;
+                }
+            .header{
+                display: flex;
+                height: 55px;
+                border-bottom: 1px;
+                border-bottom-color: rgb(212, 212, 212);
+                border-bottom-style: solid;
+                background-color: white;
+                justify-content: space-between;
+                padding-left: 10px;
+                position: fixed;
+                right: 0px;
+                left: 0px;
+                
+            }
+            .left{
+                width: 200px;
+                display: flex;
+                align-items: center;
+                margin-right: 75px;
+            }
+            .middle{
+                display: flex; 
+                flex: 1;
+                align-items: center;
+                width: 500px;
+                margin-left: 100px;
+
+
+            }
+            .right{
+                width: 250px;
+                display: flex;
+                align-items: center;
+                justify-content: end;
+                margin-left: 100px;
+            }
+            .hamburger{
+                background-color: white;
+                height: 25px;
+                margin-right: 24px;
+                margin-left: 12px;
+            }
+            .youtube-logo{
+                height: 20px;
+            }
+            .search{
+                height:25px ;
+                padding-left: 20px;
+                padding-top: 3px;
+                padding-right: 20px;
+                padding-bottom: 3px;
+                border-radius: 2px;
+                margin-left: -2px;
+                
+            }
+            .voice{
+                height: 26px;
+                background-color: rgb(248, 242, 242);
+                border-radius: 17px;
+                margin-left: 14px;
+
+            }
+            .create{
+                height: 26px;
+                border: none;
+                margin-left: 30px;
+                margin-right: 30px;
+
+            }
+            .dots{
+                height: 28px;
+                margin-right: 30px;
+            }
+            .notification{
+                height: 26px;
+                margin-right: 30px ;
+            }
+            .my-channel{
+                height: 26px;
+                margin-right: 20px;
+            }
+            
+            .total-grid{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                column-gap: 20px;
+                row-gap: 20px;
+                padding-top: 80px;
+                padding-left: 100px;
+                background-color: rgb(247, 246, 246);
+            }
+            .textbox::placeholder{
+                padding-left: 15px;
+                
+            }
+            .thumbnail{
+            width: 100%;
+            margin-bottom: 10px;
+            }
+            .textbox{
+                font-size: 18px;
+                height: 35px;
+                border-color: rgb(189, 188, 188);
+                border-style: solid;
+                border-width: 1px;
+                display: flex;
+                flex: 1;
+                margin-right: -2px;
+                width: 0;
+                max-width: 350px;
+                
+            }
+            .one-video{
+                width: 100%;
+            }
+            .video-title{
+                margin-top: 0px;
+                font-size: 18pxpx;
+                font-weight: 500;
+
+            }
+            .profile{
+                height: 40px;
+                border-radius: 25px;
+                margin-right: 10px;
+            }
+            .video-info{
+                display: flex;
+                vertical-align: top;
+            }
+            .video-text{
+                margin-top: 0px;
+            }
+            .channel-name{
+                margin: 0px;
+                color: gray;
+                font-size: 14px;
+            }
+            .video-stats{
+                margin-top: 5px;
+                color: gray;
+                font-size: 14px;
+            }
+
+        </style>
+    </head>
+
+
+
+
+    <body>
+        <div class="header">
+            <div class="left">
+                <img class="hamburger" src="./icons/hamburger-menu.svg">
+                <img class="youtube-logo" src="./icons/youtube-logo.svg">
+            </div>
+            <div class="middle">
+                <input class="textbox" type="text" placeholder="Search">
+                <button>
+                    <img class="search" src="./icons/search.svg">
+                </button>
+                <img class="voice" src="./icons/voice-search-icon.svg">
+            </div>
+            <div class="right">
+                <img class="create" src="./icons/upload.svg">
+                <img class="dots" src="./icons/youtube-apps.svg">
+                <img class="notification" src="./icons/notifications.svg">
+                <img class="my-channel" src="./icons/my-channel.jpeg">
+            </div>
+        </div>
+
+
+        <div class="sidebar">
+            <div class="s">
+                <img src="./sidebar/home.svg">
+                <p>Home</p>
+                </div>
+            <div class="s">
+                <img src="./sidebar/explore.svg">
+                <p>Explore</p>
+                </div>
+            <div class="s">
+                <img src="./sidebar/subscriptions.svg">
+                <p>Subscriptions</p>
+                </div>
+            <div class="s">
+                <img src="./sidebar/originals.svg">
+                <p>Originals</p>
+                </div>
+            <div class="s">
+                <img src="./sidebar/youtube-music.svg">
+                <p>YouTube Music</p>
+                </div>
+            <div class="s">
+                <img src="./sidebar/library.svg">
+                <p>Library</p>
+                </div>
+        </div>
+        
+        <div class="total-grid">
+            <div>
+                <div class="one-video"">
+                    <img class="thumbnail" src="./images/youtube-thumbnail-1.webp">
+                    <div class="video-info">
+                        <img class="profile" src="./images/profile photo.jpeg">
+                        <div class="video-text">
+                            <p class="video-title">
+                                Talking Tech and AI with Google CEO Sundar Pichai
+                            </p>
+                            <p class="channel-name">
+                                Marques Brownlee
+                            </p>
+                            <p class="video-stats">
+                                3.4M views 6 months ago
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+
+            <div>
+                <div class="one-video"">
+                    <img class="thumbnail" src="./images/thumbnail-2.webp">
+                    <div class="video-info">
+                        <img class="profile" src="./images/profile photo 2.jpeg">
+                        <div class="video-text">
+                            <p class="video-title">
+                                Try Not To Laugh Challenge #9
+                            </p>
+                            <p class="channel-name">
+                                Markiplier
+                            </p>
+                            <p class="video-stats">
+                                19M views 4 years ago
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+
+            <div>
+                <div class="one-video"">
+                    <img class="thumbnail" src="./images/thumbnail-3.webp">
+                    <div class="video-info">
+                        <img class="profile" src="./images/profile photo 3.jpeg">
+                        <div class="video-text">
+                            <p class="video-title">
+                                Crazy Tik Toks Taken Moments Before DISASTER
+                            </p>
+                            <p class="channel-name">
+                                SSSniperWolf
+                            </p>
+                            <p class="video-stats">
+                                12M views 1 year ago
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+
+            <div>
+                <div class="one-video"">
+                    <img class="thumbnail" src="./images/thumbnail-4.webp">
+                    <div class="video-info">
+                        <img class="profile" src="./images/profile photo 4.jpeg">
+                        <div class="video-text">
+                            <p class="video-title">
+                                The Simplest Math Problem No One Can Solve - Collatz
+                            </p>
+                            <p class="channel-name">
+                                Veritasium
+                            </p>
+                            <p class="video-stats">
+                                18M views 4 months ago
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+
+            <div>
+                <div class="one-video"">
+                    <img class="thumbnail" src="./images/thumbnail-5.webp">
+                    <div class="video-info">
+                        <img class="profile" src="./images/profile photo 5.jpeg">
+                        <div class="video-text">
+                            <p class="video-title">
+                                Kadane's Algorithm to Maximum Sum Subarray Problem
+                            </p>
+                            <p class="channel-name">
+                                CS Dojo
+                            </p>
+                            <p class="video-stats">
+                                519K views 5 months ago
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+
+            <div>
+                <div class="one-video"">
+                    <img class="thumbnail" src="./images/thumbnail-6.webp">
+                    <div class="video-info">
+                        <img class="profile" src="./images/profile photo 6.jpeg">
+                        <div class="video-text">
+                            <p class="video-title">
+                                Kadane's Algorithm to Maximum Sum Subarray Problem
+                            </p>
+                            <p class="channel-name">
+                                CS Dojo
+                            </p>
+                            <p class="video-stats">
+                                519K views 5 months ago
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+
+            <div>
+                <div class="one-video"">
+                    <img class="thumbnail" src="./images/thumbnail-7.webp">
+                    <div class="video-info">
+                        <img class="profile" src="./images/profile photo 7.jpeg">
+                        <div class="video-text">
+                            <p class="video-title">
+                                Kadane's Algorithm to Maximum Sum Subarray Problem
+                            </p>
+                            <p class="channel-name">
+                                CS Dojo
+                            </p>
+                            <p class="video-stats">
+                                519K views 5 months ago
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+
+            <div>
+                <div class="one-video"">
+                    <img class="thumbnail" src="./images/thumbnail-8.webp">
+                    <div class="video-info">
+                        <img class="profile" src="./images/profile photo 8.jpeg">
+                        <div class="video-text">
+                            <p class="video-title">
+                                Kadane's Algorithm to Maximum Sum Subarray Problem
+                            </p>
+                            <p class="channel-name">
+                                CS Dojo
+                            </p>
+                            <p class="video-stats">
+                                519K views 5 months ago
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </body>
+    
+    
